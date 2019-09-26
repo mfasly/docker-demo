@@ -4,7 +4,7 @@ pipeline {
         stage('Setup') {
             steps {
                 script {
-                    startZap(host: "localhost", port: 9091, timeout:1200, zapHome: "/var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/zap/ZAP_2.8.0", sessionPath:"/var/jenkins_home/tools/com.cloudbees.jenkins.plugins.customtools.CustomTool/zap/ZAP_2.8.0/session.session", allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
+                    startZap(host: "localhost", port: 9091, timeout:1200, zapHome: "/opt/zaproxy/ZAP_2.8.1", sessionPath:"/opt/zaproxy/ZAP_2.8.1/session.session", allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
                 }
             }
         }
