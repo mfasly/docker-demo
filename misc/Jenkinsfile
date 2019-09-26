@@ -4,7 +4,7 @@ pipeline {
         stage('Setup') {
             steps {
                 script {
-                    startZap(host: "localhost", port: 9091, timeout:1200, zapHome: "/var/jenkins_home/jobs/ZAP_Pipline/ZAP_2.8.1", sessionPath:"/var/jenkins_home/jobs/ZAP_Pipline/ZAP_2.8.1/session.session", allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
+                    startZap(host: "localhost", port: 9091, timeout:1200, zapHome: "/var/jenkins_home/jobs/ZAP_Pipline/ZAP_2.8.1", allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
                 }
             }
         }
