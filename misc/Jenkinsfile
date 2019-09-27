@@ -8,7 +8,7 @@ pipeline {
                 }
             }
         }
-    }
+    
    
    def commit_id
    stage('Preparation') {
@@ -27,6 +27,7 @@ pipeline {
        def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
        }
      }
+  }
     post {
         always {
             script {
