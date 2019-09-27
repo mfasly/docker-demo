@@ -9,7 +9,7 @@ pipeline {
             }
         }
     }
-    node {
+   
    def commit_id
    stage('Preparation') {
      checkout scm
@@ -27,7 +27,6 @@ pipeline {
        def app = docker.build("wardviaene/docker-nodejs-demo:${commit_id}", '.').push()
        }
      }
-   }
     post {
         always {
             script {
